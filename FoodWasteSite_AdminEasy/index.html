@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Food Waste Management System</title>
+  <meta name="description" content="Donate excess food and connect donors with NGOs and delivery volunteers." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header__flex">
+      <a class="brand" href="#home" aria-label="Food Donate Home">
+        <img src="assets/img/logo.svg" alt="" />
+        <span>Food Donate</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navMenu">Menu</button>
+        <ul id="navMenu" class="nav__menu" aria-expanded="false">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#abstract">Abstract</a></li>
+          <li><a href="#proposed">Proposed System</a></li>
+          <li><a href="#modules">Modules</a></li>
+          <li><a href="#donate">Donate</a></li>
+          <li><a href="#admin">Admin</a></li>
+          <li><a href="#delivery">Delivery</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <h1><span class="accent">Food Waste</span> Management System</h1>
+          <p class="lead">Collect excess food from donors and redistribute to the needy via NGOs and delivery volunteers.</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#donate">Donate Food</a>
+            <a class="btn btn--ghost" href="#proposed">How it works</a>
+          </div>
+          <ul class="hero__badges" aria-label="Highlights">
+            <li>Reduce Waste</li>
+            <li>Feed the Needy</li>
+            <li>Mobile Friendly</li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <img src="assets/img/hero.svg" alt="Illustration of food donation workflow" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Abstract -->
+    <section id="abstract" class="section section--alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Abstract</h2>
+          <p>1/3 of food produced globally is wasted while many face food shortages. This system helps donors give excess food that NGOs can collect and distribute efficiently.</p>
+        </header>
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Problem at Events</h3>
+            <p>Invited guests (X) vs attending (Y) → typically X &gt; Y → leftover food is wasted. Our system channels the extra food to people who need it.</p>
+          </div>
+          <div class="card">
+            <h3>Existing System</h3>
+            <p>Donors must manually find NGOs and check requirements, which is time‑consuming and discouraging.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proposed System -->
+    <section id="proposed" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Proposed System</h2>
+          <p>An interface connecting Donors, NGOs/Admins, and Delivery volunteers to list, claim, and deliver food donations.</p>
+        </header>
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>User (Donor)</h3>
+            <ul class="list">
+              <li>Register / Login</li>
+              <li>Create a donation (type, quantity, time)</li>
+              <li>Track status &amp; history</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Admin (NGO)</h3>
+            <ul class="list">
+              <li>See incoming donations</li>
+              <li>Approve &amp; assign pickups</li>
+              <li>Maintain records</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Delivery</h3>
+            <ul class="list">
+              <li>View assigned pickups</li>
+              <li>Map pickup &amp; drop</li>
+              <li>Mark delivered</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modules -->
+    <section id="modules" class="section section--alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Modules</h2>
+          <p>User, Admin, and Delivery with simple flows. (Prototype uses local storage; no server required.)</p>
+        </header>
+        <div class="grid grid--3">
+          <div class="card">
+            <h3>User Module</h3>
+            <p>Register/Login, donate food, view history.</p>
+          </div>
+          <div class="card">
+            <h3>Admin Module</h3>
+            <p>Manage donations, approve requests, assign pickups.</p>
+          </div>
+          <div class="card">
+            <h3>Delivery Module</h3>
+            <p>See assigned orders, pick up and deliver to NGOs.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donate -->
+    <section id="donate" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Donate Food</h2>
+          <p>Fill this form to donate your excess food. (Saved locally for demo.)</p>
+        </header>
+        <form id="donationForm" class="form card" autocomplete="on">
+          <div class="form__row">
+            <label for="donorName">Your Name</label>
+            <input id="donorName" name="donorName" required />
+          </div>
+          <div class="form__row">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" required />
+          </div>
+          <div class="form__row">
+            <label for="foodType">Food Type</label>
+            <input id="foodType" name="foodType" placeholder="e.g., Rice, Curry, Roti" required />
+          </div>
+          <div class="form__row">
+            <label for="quantity">Quantity</label>
+            <input id="quantity" name="quantity" placeholder="e.g., 30 plates or 10 kg" required />
+          </div>
+          <div class="form__row">
+            <label for="pickupAddress">Pickup Address</label>
+            <input id="pickupAddress" name="pickupAddress" required />
+          </div>
+          <div class="form__row">
+            <label for="readyBy">Ready By (time)</label>
+            <input id="readyBy" name="readyBy" type="time" required />
+          </div>
+          <div class="form__row">
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes" rows="3" placeholder="Any instructions..."></textarea>
+          </div>
+          <button class="btn btn--primary" type="submit">Submit Donation</button>
+        </form>
+
+        <div class="donation-history">
+          <h3>Your Recent Donations</h3>
+          <table class="table" id="historyTable" aria-describedby="historyHelp">
+            <thead><tr><th>Food</th><th>Qty</th><th>Status</th><th>When</th></tr></thead>
+            <tbody></tbody>
+          </table>
+          <p id="historyHelp" class="muted">This is saved only in your browser for demo.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Admin (with easy password gate) -->
+    <section id="admin" class="section section--alt">
+      <div class="container">
+        <header class="section__header">
+          <h2>Admin (NGO)</h2>
+          <p>Incoming donations (approve &amp; assign). <strong>Locked</strong> until you enter the admin password.</p>
+        </header>
+
+        <!-- Admin Login Box -->
+        <div class="card admin-login" id="adminLogin">
+          <h3>Admin Login</h3>
+          <p class="muted">Enter the admin password to manage donations. (Demo only, not secure for real use.)</p>
+          <div class="form__row">
+            <label for="adminPass">Password</label>
+            <input id="adminPass" type="password" placeholder="Enter password e.g., admin123" />
+          </div>
+          <button class="btn btn--primary" id="adminLoginBtn" type="button">Unlock Admin</button>
+        </div>
+
+        <!-- Admin Panel (hidden until unlocked) -->
+        <div id="adminPanel" style="display:none">
+          <div class="card">
+            <table class="table" id="adminTable">
+              <thead>
+                <tr><th>Donor</th><th>Food</th><th>Qty</th><th>Pickup</th><th>Ready</th><th>Actions</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <p>
+            <button class="btn" id="adminLogout" type="button">Log out</button>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Delivery -->
+    <section id="delivery" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Delivery</h2>
+          <p>Assigned orders &amp; simple map placeholder.</p>
+        </header>
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Assigned Orders</h3>
+            <table class="table" id="deliveryTable">
+              <thead>
+                <tr><th>Donor</th><th>Food</th><th>Qty</th><th>Pickup</th><th>Status</th><th>Action</th></tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <div class="card">
+            <h3>Map (Placeholder)</h3>
+            <img src="assets/img/map.svg" alt="Map placeholder" />
+            <p class="muted">Integrate GPS/real maps in a full backend version.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--cta">
+      <div class="container">
+        <div class="cta">
+          <h2>Contact</h2>
+          <p>Questions or suggestions? Send us a message.</p>
+          <form id="contactForm" class="form" action="#" method="post">
+            <div class="form__row">
+              <label for="cname">Name</label>
+              <input id="cname" name="cname" required />
+            </div>
+            <div class="form__row">
+              <label for="cemail">Email</label>
+              <input id="cemail" name="cemail" type="email" required />
+            </div>
+            <div class="form__row">
+              <label for="cmsg">Message</label>
+              <textarea id="cmsg" name="cmsg" rows="4" required></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <div>
+        <a class="brand" href="#home"><img src="assets/img/logo.svg" alt="" /> Food Donate</a>
+        <p class="muted">© <span id="year"></span> Food Donate. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul class="footer__menu">
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#proposed">How it works</a></li>
+          <li><a href="#modules">Modules</a></li>
+        </ul>
+      </nav>
+      <div class="social">
+        <a aria-label="LinkedIn" href="#">LinkedIn</a>
+        <a aria-label="Twitter" href="#">Twitter</a>
+        <a aria-label="YouTube" href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Chatbot -->
+  <button class="chat-fab" id="chatFab" aria-label="Open chat">💬</button>
+  <div class="chat" id="chat" aria-live="polite" aria-label="Simple chatbot">
+    <div class="chat__header">
+      <strong>Help Bot</strong>
+      <button id="chatClose" aria-label="Close chat">✕</button>
+    </div>
+    <div class="chat__log" id="chatLog" role="log" aria-relevant="additions"></div>
+    <form id="chatForm" class="chat__form">
+      <input id="chatInput" placeholder="Type a question… (e.g., how to donate)" aria-label="Chat input"/>
+      <button class="btn btn--primary" type="submit">Send</button>
+    </form>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

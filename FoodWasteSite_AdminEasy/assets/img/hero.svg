@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#60a5fa" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#7dd3fc" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="400" rx="24" fill="url(#g)" />
+  <g fill="none" stroke="#7dd3fc" stroke-width="3" opacity="0.8">
+    <path d="M60 280 C140 220, 220 260, 300 200 S 460 120, 560 160"/>
+    <circle cx="120" cy="220" r="12"/><circle cx="300" cy="200" r="12"/>
+    <circle cx="460" cy="160" r="12"/><circle cx="560" cy="160" r="12"/>
+  </g>
+  <g fill="#60a5fa" opacity="0.8">
+    <rect x="80" y="70" width="120" height="60" rx="10"/>
+    <rect x="250" y="60" width="140" height="70" rx="10"/>
+    <rect x="430" y="80" width="120" height="60" rx="10"/>
+  </g>
+  <text x="40" y="360" fill="#e8ecf1" font-family="Arial" font-size="24">Donate → Admin → Delivery</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+  <rect width="640" height="400" fill="#0b1024" />
+  <g stroke="#28304f" stroke-width="2">
+    <path d="M50 50 L590 50 L590 350 L50 350 Z" fill="#101636"/>
+    <path d="M100 120 L540 120" /><path d="M100 180 L540 180" /><path d="M100 240 L540 240" /><path d="M100 300 L540 300" />
+    <path d="M200 80 L200 330" /><path d="M320 80 L320 330" /><path d="M440 80 L440 330" />
+  </g>
+  <circle cx="220" cy="210" r="10" fill="#60a5fa"/>
+  <circle cx="420" cy="150" r="10" fill="#7dd3fc"/>
+  <text x="240" y="215" fill="#e8ecf1" font-family="Arial" font-size="14">Pickup</text>
+  <text x="440" y="155" fill="#e8ecf1" font-family="Arial" font-size="14">Drop</text>
+</svg>
